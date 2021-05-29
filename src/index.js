@@ -1,14 +1,24 @@
-import React from 'react';
+import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import axios from 'axios';
 
-ReactDOM.render(
+
+ReactDOM.render(  
   <React.StrictMode>
-    <App />
+    <h1>Open Positions</h1>
+    <App/>
   </React.StrictMode>,
-  document.getElementById('root')
+  // <button className = "Greeting" onClick = {
+  //   function() {
+  //     return axios.getUrl(); 
+  //   }
+  // }>
+  //   Greet
+  // </button>,
+  document.getElementById('root'),
 );
 
 // If you want to start measuring performance in your app, pass a function
