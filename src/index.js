@@ -1,23 +1,18 @@
-import React, {Component} from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import axios from 'axios';
 
+import 'bootstrap/dist/css/bootstrap.css';
+import { BrowserRouter } from "react-router-dom";
 
-ReactDOM.render(  
+ReactDOM.render(
+  <BrowserRouter>
   <React.StrictMode>
-    <h1>Open Positions</h1>
-    <App/>
-  </React.StrictMode>,
-  // <button className = "Greeting" onClick = {
-  //   function() {
-  //     return axios.getUrl(); 
-  //   }
-  // }>
-  //   Greet
-  // </button>,
+    <App />
+  </React.StrictMode>
+  </BrowserRouter>,  
   document.getElementById('root'),
 );
 

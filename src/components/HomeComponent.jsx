@@ -7,8 +7,11 @@ class HomeComponent extends Component {
             <div>
                 <center>
                 <h1> Welcome to React App! </h1>
-                <h2>Click below to get data from backend!</h2>
-                <a class="btn btn-primary" href="/data" role="button">Click</a>
+                {/* <h2>Click below to get data from backend!</h2> */}
+                {/* <a class="btn btn-primary" href="/data" role="button">Click</a> */}
+                <br />
+                <br />
+                <br />
                 </center>
             </div>
         );

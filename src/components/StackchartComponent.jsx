@@ -1,11 +1,7 @@
+import React, { Component } from 'react';
 import { Tooltip } from 'chart.js';
-import React, {Component} from 'react';
 import { XAxis, YAxis, BarChart, CartesianGrid, Legend, Bar, LabelList } from 'recharts';
 
-// let positions = ['Investment', 'Technology', 'Research', 'Finance'];
-// let offered = [ 20, 10, 13, 20];
-// let on_hold = [4, 2, 1, 0];
-// let approved = [12, 7, 10, 17];
 
 let data = [
     {
@@ -22,9 +18,18 @@ let data = [
     },
 ];
 
-const StackChart = () => {
-            return (
-                <BarChart width = {600} height = {400} data = {data}>
+const colorConfig = {
+    "offered": "lightblue",
+    "on_hold": "orange",
+    "approved": "grey"
+};
+
+class StackChartComponent extends Component {
+    render() {
+        return (
+            <div>
+                <center>
+                    <BarChart width = {600} height = {400} data = {data}>
                     <CartesianGrid strokeDasharray = "3 3"/>
                     <XAxis dataKey = "position" interval = {0} />
                     <YAxis/>
@@ -40,13 +45,10 @@ const StackChart = () => {
                         <LabelList dataKey = "approved" style = {{ fill: "#FFF"}}/>
                     </Bar>
                 </BarChart>
-            );
-        }
+                </center> 
+            </div>
+        );
+    }
+}
 
-const colorConfig = {
-    "offered": "lightblue",
-    "on_hold": "orange",
-    "approved": "grey"
-};
-
-export default StackChart;
+export default StackChartComponent;
